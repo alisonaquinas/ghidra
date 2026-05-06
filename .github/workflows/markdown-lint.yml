@@ -1,0 +1,80 @@
+name: Markdown Lint
+
+on:
+  push:
+    paths:
+      - '**/*.md'
+      - '.markdownlint-cli2.jsonc'
+      - 'docs/wiki/.obsidian-linter.jsonc'
+      - '.github/workflows/markdown-lint.yml'
+  pull_request:
+    paths:
+      - '**/*.md'
+      - '.markdownlint-cli2.jsonc'
+      - 'docs/wiki/.obsidian-linter.jsonc'
+      - '.github/workflows/markdown-lint.yml'
+
+jobs:
+  lint-docs:
+    name: Lint docs/wiki (markdownlint-obsidian)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install markdownlint-obsidian-cli
+        run: npm install -g markdownlint-obsidian-cli
+
+      - name: Lint wiki
+        run: markdownlint-obsidian --config docs/wiki/ "docs/wiki/**/*.md"
+
+  lint-repo:
+    name: Lint repo markdown (markdownlint-cli2)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install markdownlint-cli2
+        run: npm install -g markdownlint-cli2
+
+      - name: Resolve diff base
+        id: base
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            git fetch origin "$BASE_REF"
+            echo "ref=origin/$BASE_REF" >> "$GITHUB_OUTPUT"
+          else
+            echo "ref=HEAD~1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Find changed non-docs markdown files
+        id: changed
+        env:
+          BASE: ${{ steps.base.outputs.ref }}
+        run: |
+          git diff --name-only --diff-filter=ACM "$BASE"...HEAD -- '*.md' > /tmp/all-changed-md.txt
+          grep -v '^docs/' /tmp/all-changed-md.txt > /tmp/changed-md.txt || true
+          if [ -s /tmp/changed-md.txt ]; then
+            echo "has_files=true" >> "$GITHUB_OUTPUT"
+            echo "Changed files:"
+            cat /tmp/changed-md.txt
+          else
+            echo "has_files=false" >> "$GITHUB_OUTPUT"
+            echo "No non-docs markdown files changed."
+          fi
+
+      - name: Lint changed files
+        if: steps.changed.outputs.has_files == 'true'
+        run: xargs markdownlint-cli2 --config .markdownlint-cli2.jsonc < /tmp/changed-md.txt

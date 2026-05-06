@@ -1,0 +1,76 @@
+{
+  // markdownlint-obsidian configuration for docs/wiki/ — Obsidian Flavored Markdown (OFM).
+  // Tool: https://github.com/alisonaquinas/markdownlint-obsidian
+  //
+  // Rule philosophy: maximally strict. All OFM rules enabled by default.
+  // Standard MD rules are kept at their markdownlint-obsidian defaults (several
+  // are pre-disabled where they conflict with OFM syntax) unless there is a
+  // specific documented reason to override.
+  //
+  // OFM rules pre-disabled by the tool that remain intentionally OFF:
+  //   MD013 — re-enabled here at 120 chars (wiki pages have wide tables and long wikilink paths)
+  //   MD018, MD028, MD033, MD034, MD041, MD042 — remain disabled (OFM incompatible)
+
+  "vaultRoot": "./",
+  "resolve": true,
+  "globs": ["**/*.md"],
+  // AGENTS.md, index.md, and log.md are structural wiki files explicitly exempt
+  // from page frontmatter requirements per the wiki schema (docs/wiki/AGENTS.md).
+  "ignores": ["**/AGENTS.md", "**/index.md", "**/log.md"],
+
+  "rules": {
+    // MD013 — line-length: disabled by default in OFM context, re-enabled at 120 chars.
+    // Code blocks and tables are exempt; wiki tables contain wide content.
+    "MD013": {
+      "enabled": true,
+      "options": {
+        "line_length": 120,
+        "heading_line_length": 120,
+        "code_block_line_length": 120,
+        "code_blocks": false,
+        "tables": false
+      }
+    },
+
+    // MD004 — ul-style: "consistent" per file.
+    "MD004": { "enabled": true, "options": { "style": "consistent" } },
+
+    // MD026 — no-trailing-punctuation: disabled.
+    // Wiki tables and category headers legitimately include trailing colons.
+    "MD026": { "enabled": false },
+
+    // MD049 — emphasis-style: "consistent" per file.
+    "MD049": { "enabled": true, "options": { "style": "consistent" } },
+
+    // MD050 — strong-style: "consistent" per file.
+    "MD050": { "enabled": true, "options": { "style": "consistent" } },
+
+    // MD055 — table-pipe-style: "consistent" within each table.
+    "MD055": { "enabled": true, "options": { "style": "consistent" } },
+
+    // MD060 — table-column-style: "consistent" within each table.
+    "MD060": { "enabled": true, "options": { "style": "consistent" } },
+
+    // MD025 — single-title: disable front_matter_title detection.
+    // Wiki pages intentionally have both `title:` in frontmatter AND a `# H1` body heading.
+    // Without this, markdownlint v0.40+ counts the frontmatter title as a second H1.
+    "MD025": { "enabled": true, "options": { "front_matter_title": "" } },
+
+    // OFM082 — wikilink-targets: verify all [[Page]] links resolve within the vault.
+    "OFM082": { "enabled": true },
+
+    // OFM084 — empty-required-key: disabled.
+    // Stub pages intentionally have sources: [] until sources are ingested.
+    "OFM084": { "enabled": false }
+  },
+
+  // Required frontmatter keys for all wiki pages (OFM080).
+  // dateFields marks `updated` as requiring ISO-8601 format.
+  // typeMap and allowUnknown left at defaults (empty map, unknown keys allowed).
+  "frontmatter": {
+    "required": ["title", "category", "tags", "status", "sources", "updated"],
+    "dateFields": ["updated"],
+    "typeMap": {},
+    "allowUnknown": true
+  }
+}
