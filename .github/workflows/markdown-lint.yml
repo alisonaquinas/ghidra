@@ -36,6 +36,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -44,7 +46,35 @@ jobs:
       - name: Install markdownlint-cli2
         run: npm install -g markdownlint-cli2
 
-      - name: Lint non-docs markdown
-        # Exit 0 regardless: upstream Ghidra .md files have pre-existing violations
-        # we don't own. Violations still print to the log for visibility.
-        run: markdownlint-cli2 --config .markdownlint-cli2.jsonc '**/*.md' || true
+      - name: Resolve diff base
+        id: base
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            git fetch origin "$BASE_REF"
+            echo "ref=origin/$BASE_REF" >> "$GITHUB_OUTPUT"
+          else
+            echo "ref=HEAD~1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Find changed non-docs markdown files
+        id: changed
+        env:
+          BASE: ${{ steps.base.outputs.ref }}
+        run: |
+          git diff --name-only --diff-filter=ACM "$BASE"...HEAD -- '*.md' \
+            | grep -v '^docs/' > /tmp/changed-md.txt || true
+          if [ -s /tmp/changed-md.txt ]; then
+            echo "has_files=true" >> "$GITHUB_OUTPUT"
+            echo "Changed files:"
+            cat /tmp/changed-md.txt
+          else
+            echo "has_files=false" >> "$GITHUB_OUTPUT"
+            echo "No non-docs markdown files changed."
+          fi
+
+      - name: Lint changed files
+        if: steps.changed.outputs.has_files == 'true'
+        run: xargs markdownlint-cli2 --config .markdownlint-cli2.jsonc < /tmp/changed-md.txt
