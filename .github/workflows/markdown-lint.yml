@@ -21,11 +21,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Lint wiki with markdownlint-obsidian
-        uses: alisonaquinas/markdownlint-obsidian/action@v0.8.0
+      - uses: actions/setup-node@v4
         with:
-          config: docs/wiki/.obsidian-linter.jsonc
-          globs: docs/wiki/**/*.md
+          node-version: '24'
+
+      - name: Install markdownlint-obsidian-cli
+        run: npm install -g markdownlint-obsidian-cli
+
+      - name: Lint wiki
+        run: markdownlint-obsidian --config docs/wiki/ "docs/wiki/**/*.md"
 
   lint-repo:
     name: Lint repo markdown (markdownlint-cli2)
@@ -35,6 +39,10 @@ jobs:
     continue-on-error: true
     steps:
       - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
 
       - name: Install markdownlint-cli2
         run: npm install -g markdownlint-cli2
