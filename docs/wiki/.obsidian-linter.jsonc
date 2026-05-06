@@ -14,7 +14,9 @@
   "vaultRoot": "./",
   "resolve": true,
   "globs": ["**/*.md"],
-  "ignores": [],
+  // AGENTS.md, index.md, and log.md are structural wiki files explicitly exempt
+  // from page frontmatter requirements per the wiki schema (docs/wiki/AGENTS.md).
+  "ignores": ["**/AGENTS.md", "**/index.md", "**/log.md"],
 
   "rules": {
     // MD013 — line-length: disabled by default in OFM context, re-enabled at 120 chars.
@@ -55,12 +57,20 @@
     "MD025": { "enabled": true, "options": { "front_matter_title": "" } },
 
     // OFM082 — wikilink-targets: verify all [[Page]] links resolve within the vault.
-    "OFM082": { "enabled": true }
+    "OFM082": { "enabled": true },
+
+    // OFM084 — empty-required-key: disabled.
+    // Stub pages intentionally have sources: [] until sources are ingested.
+    "OFM084": { "enabled": false }
   },
 
-  // Required frontmatter keys for all wiki pages.
-  // Enforced by OFM080 (frontmatter-required-keys).
+  // Required frontmatter keys for all wiki pages (OFM080).
+  // dateFields marks `updated` as requiring ISO-8601 format.
+  // typeMap and allowUnknown left at defaults (empty map, unknown keys allowed).
   "frontmatter": {
-    "required": ["title", "category", "tags", "status", "sources", "updated"]
+    "required": ["title", "category", "tags", "status", "sources", "updated"],
+    "dateFields": ["updated"],
+    "typeMap": {},
+    "allowUnknown": true
   }
 }
