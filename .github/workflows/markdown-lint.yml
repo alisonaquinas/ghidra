@@ -64,8 +64,8 @@ jobs:
         env:
           BASE: ${{ steps.base.outputs.ref }}
         run: |
-          git diff --name-only --diff-filter=ACM "$BASE"...HEAD -- '*.md' \
-            | grep -v '^docs/' > /tmp/changed-md.txt || true
+          git diff --name-only --diff-filter=ACM "$BASE"...HEAD -- '*.md' > /tmp/all-changed-md.txt
+          grep -v '^docs/' /tmp/all-changed-md.txt > /tmp/changed-md.txt || true
           if [ -s /tmp/changed-md.txt ]; then
             echo "has_files=true" >> "$GITHUB_OUTPUT"
             echo "Changed files:"
