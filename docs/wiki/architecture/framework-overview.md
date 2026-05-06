@@ -12,13 +12,13 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary sources: `Ghidra/Framework/` source tree, `DevGuide.md`.
 
-Ghidra's codebase is organized into three layers — Framework, Features, and Extensions — with a plugin-based architecture binding them together.
+Ghidra's codebase is organized into three layers — Framework, Features, and Extensions — with a plugin-based
+architecture binding them together.
 
 ## Three-Layer Structure
 
-*(To be filled in)*
-
-- **Framework** (`Ghidra/Framework/`) — core infrastructure: DB, GUI docking, file system, graph, project model, software modeling, utilities
+- **Framework** (`Ghidra/Framework/`) — core infrastructure: DB, GUI docking, file system, graph, project model,
+  software modeling, utilities
 - **Features** (`Ghidra/Features/`) — user-facing capabilities built on the Framework
 - **Extensions** (`Ghidra/Extensions/`) — optional add-ons, some bundled with the release
 - **Processors** (`Ghidra/Processors/`) — ISA definitions via [[Sleigh]]
@@ -51,4 +51,4 @@ Ghidra's codebase is organized into three layers — Framework, Features, and Ex
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

@@ -16,16 +16,12 @@ Ghidra's decompilation feature converts disassembled code into C pseudocode via 
 
 ## Overview
 
-*(To be filled in)*
-
 - The Decompiler window shows C pseudocode for a selected function
 - Synchronized with the Listing view — clicking in one highlights the other
 - Supports renaming, retyping variables, and adding comments that persist
 - Output improves with better type information (imported PDB, user annotations)
 
 ## The Decompilation Pipeline
-
-*(To be filled in)*
 
 - Raw binary → [[Sleigh]] lifting → raw [[P-Code]] → simplified P-Code → high P-Code (SSA) → C AST → output
 
@@ -39,4 +35,4 @@ Ghidra's decompilation feature converts disassembled code into C pseudocode via 
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

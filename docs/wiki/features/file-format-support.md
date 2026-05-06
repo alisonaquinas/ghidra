@@ -16,9 +16,8 @@ Ghidra supports loading a wide variety of executable and binary file formats via
 
 ## Overview
 
-*(To be filled in)*
-
 Planned content — supported formats:
+
 - PE / PE+ (Windows executables and DLLs)
 - ELF (Linux, Android, embedded)
 - Mach-O (macOS, iOS)
@@ -30,8 +29,6 @@ Planned content — supported formats:
 - Firmware formats (various)
 
 ## Loader Architecture
-
-*(To be filled in)*
 
 - Loaders live in `Ghidra/Features/FileFormats/` and in processor-specific modules
 - Each loader implements the `Loader` interface
@@ -47,4 +44,4 @@ Planned content — supported formats:
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

@@ -14,16 +14,12 @@ updated: 2026-05-06
 
 ## Licensing
 
-*(To be filled in)*
-
 - Primary license: Apache License 2.0
 - GPL code must live in `GPL/` as a standalone, independently buildable module
 - Additional licenses in `licenses/` directory
 - Prefer Apache 2.0 for new contributions; other compatible licenses acceptable
 
 ## Contributing
-
-*(To be filled in)*
 
 - Credit given via Git commit authorship — ensure GitHub account is linked
 - No author names directly in source code (discouraged)
@@ -36,4 +32,4 @@ updated: 2026-05-06
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

@@ -1,0 +1,43 @@
+name: Markdown Lint
+
+on:
+  push:
+    paths:
+      - '**/*.md'
+      - '.markdownlint-cli2.jsonc'
+      - 'docs/wiki/.obsidian-linter.jsonc'
+      - '.github/workflows/markdown-lint.yml'
+  pull_request:
+    paths:
+      - '**/*.md'
+      - '.markdownlint-cli2.jsonc'
+      - 'docs/wiki/.obsidian-linter.jsonc'
+      - '.github/workflows/markdown-lint.yml'
+
+jobs:
+  lint-docs:
+    name: Lint docs/wiki (markdownlint-obsidian)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint wiki with markdownlint-obsidian
+        uses: alisonaquinas/markdownlint-obsidian/action@v0.8.0
+        with:
+          config: docs/wiki/.obsidian-linter.jsonc
+          globs: docs/wiki/**/*.md
+
+  lint-repo:
+    name: Lint repo markdown (markdownlint-cli2)
+    runs-on: ubuntu-latest
+    # Informational: existing upstream Ghidra .md files have pre-existing violations.
+    # This job surfaces new regressions without blocking the branch.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install markdownlint-cli2
+        run: npm install -g markdownlint-cli2
+
+      - name: Lint non-docs markdown
+        run: markdownlint-cli2 --config .markdownlint-cli2.jsonc '**/*.md'

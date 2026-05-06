@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary sources: `Ghidra/Features/GhidraServer/`, `GhidraDocs/GettingStarted.md`.
 
-GhidraServer is the multi-user collaboration server for Ghidra. It hosts shared project repositories that multiple analysts can connect to, enabling concurrent work on the same binary.
+GhidraServer is the multi-user collaboration server for Ghidra. It hosts shared project repositories that multiple
+analysts can connect to, enabling concurrent work on the same binary.
 
 ## Overview
-
-*(To be filled in)*
 
 - Provides a versioned, shared repository model
 - Clients connect via RMI
@@ -25,17 +24,14 @@ GhidraServer is the multi-user collaboration server for Ghidra. It hosts shared 
 
 ## Architecture
 
-*(To be filled in)*
-
 Planned content:
+
 - Server process startup and configuration
 - Repository storage layout
 - Check-in / check-out workflow
 - The `-i` interface option and network binding
 
 ## Running the Server
-
-*(To be filled in)*
 
 ## Related Components
 
@@ -45,7 +41,7 @@ Planned content:
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.
 
 ## Open Questions
 

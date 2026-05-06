@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary sources: `Ghidra/Debug/`, `GhidraDocs/GhidraClass/Debugger/`.
 
-The debugging feature integrates dynamic analysis into Ghidra's UI, connecting live debugger sessions with static analysis annotations.
+The debugging feature integrates dynamic analysis into Ghidra's UI, connecting live debugger sessions with static
+analysis annotations.
 
 ## Overview
-
-*(To be filled in)*
 
 - Requires the [[Debugger]] subsystem and at least one debugger agent
 - Displays live register state, memory, and stack alongside the Listing and Decompiler
@@ -24,8 +23,6 @@ The debugging feature integrates dynamic analysis into Ghidra's UI, connecting l
 - Supports emulation via the Emulation framework
 
 ## Key Windows
-
-*(To be filled in)*
 
 - Debugger Threads
 - Debugger Stack
@@ -41,4 +38,4 @@ The debugging feature integrates dynamic analysis into Ghidra's UI, connecting l
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

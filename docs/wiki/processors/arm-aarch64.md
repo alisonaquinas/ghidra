@@ -16,19 +16,13 @@ Ghidra supports both 32-bit ARM (including Thumb and Thumb-2) and 64-bit AArch64
 
 ## Overview
 
-*(To be filled in)*
-
 - ARM module: `Ghidra/Processors/ARM/` — covers ARMv4 through ARMv7, Thumb, Thumb-2
 - AArch64 module: `Ghidra/Processors/AARCH64/` — ARMv8/v8.x 64-bit
 - Heavily used for Android, iOS, and embedded targets
 
 ## Sleigh Files
 
-*(To be filled in)*
-
 ## Known Issues / Quirks
-
-*(To be filled in)*
 
 - Interworking between ARM and Thumb modes
 - IT block handling in Thumb-2
@@ -41,4 +35,4 @@ Ghidra supports both 32-bit ARM (including Thumb and Thumb-2) and 64-bit AArch64
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

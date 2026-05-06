@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary source: `Ghidra/Framework/DB/`.
 
-The DB layer is Ghidra's internal database abstraction — a custom embedded database that provides transactional, versioned storage for Program data.
+The DB layer is Ghidra's internal database abstraction — a custom embedded database that provides transactional,
+versioned storage for Program data.
 
 ## Overview
-
-*(To be filled in)*
 
 - Not SQL — a custom record-oriented database
 - Provides: tables, records, fields, indexing, transactions, undo/redo
@@ -24,8 +23,6 @@ The DB layer is Ghidra's internal database abstraction — a custom embedded dat
 - Supports versioned repositories via GhidraServer
 
 ## Key Concepts
-
-*(To be filled in)*
 
 - `DBHandle` — a connection to an open database
 - `Table` — a typed collection of records
@@ -41,4 +38,4 @@ The DB layer is Ghidra's internal database abstraction — a custom embedded dat
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

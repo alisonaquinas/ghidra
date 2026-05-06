@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary source: `Ghidra/Features/ProgramDiff/`.
 
-Program Diff compares two Ghidra programs (loaded binaries) and highlights differences in code, data, and markup between them.
+Program Diff compares two Ghidra programs (loaded binaries) and highlights differences in code, data, and markup between
+them.
 
 ## Overview
-
-*(To be filled in)*
 
 - Compares bytes, instructions, data types, symbols, comments, and references
 - Side-by-side diff view synchronized with the Listing
@@ -30,4 +29,4 @@ Program Diff compares two Ghidra programs (loaded binaries) and highlights diffe
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

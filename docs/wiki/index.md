@@ -5,7 +5,8 @@ updated: 2026-05-06
 
 # Ghidra Wiki — Content Index
 
-This is the master catalog of all pages in the wiki. The LLM updates this file on every ingest. When answering a query, read this file first to locate relevant pages.
+This is the master catalog of all pages in the wiki. The LLM updates this file on every ingest.
+When answering a query, read this file first to locate relevant pages.
 
 ---
 

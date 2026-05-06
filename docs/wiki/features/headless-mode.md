@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary sources: `GhidraDocs/GettingStarted.md`, `Ghidra/Features/Base/` headless launcher.
 
-Headless mode runs Ghidra non-interactively via the `analyzeHeadless` script, enabling automated batch analysis, CI/CD integration, and large-scale processing pipelines.
+Headless mode runs Ghidra non-interactively via the `analyzeHeadless` script, enabling automated batch analysis, CI/CD
+integration, and large-scale processing pipelines.
 
 ## Overview
-
-*(To be filled in)*
 
 - Launched via `support/analyzeHeadless` (or `.bat` on Windows)
 - Accepts a project path, binary files, and pre/post-analysis scripts
@@ -24,8 +23,6 @@ Headless mode runs Ghidra non-interactively via the `analyzeHeadless` script, en
 - Full access to the [[Scripting API]] via `HeadlessScript`
 
 ## Common Use Cases
-
-*(To be filled in)*
 
 - Bulk import and analyze a directory of binaries
 - Run a custom script against each binary and extract results
@@ -41,4 +38,4 @@ Headless mode runs Ghidra non-interactively via the `analyzeHeadless` script, en
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

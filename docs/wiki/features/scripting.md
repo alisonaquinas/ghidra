@@ -16,8 +16,6 @@ Ghidra supports user-written scripts in Java and Python for automating analysis 
 
 ## Overview
 
-*(To be filled in)*
-
 - Script Manager UI: browse, run, and edit scripts from within the GUI
 - Scripts live in `~/ghidra_scripts/` by default (configurable)
 - Java scripts extend `GhidraScript` (or `HeadlessScript` for headless use)
@@ -25,16 +23,12 @@ Ghidra supports user-written scripts in Java and Python for automating analysis 
 
 ## Scripting API
 
-*(To be filled in)*
-
 - The `FlatProgramAPI` provides a simplified script-friendly interface
 - Full program database access: functions, instructions, data, references, symbols
 - Can interact with the GUI (dialogs, progress monitors) in GUI mode
 - See [[Scripting API]] for the full API surface
 
 ## Headless Scripting
-
-*(To be filled in)*
 
 - `analyzeHeadless` script runs scripts without launching the GUI
 - See [[Headless Mode]]
@@ -49,4 +43,4 @@ Ghidra supports user-written scripts in Java and Python for automating analysis 
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

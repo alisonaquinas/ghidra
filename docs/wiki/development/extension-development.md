@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary sources: `GhidraBuild/Skeleton/`, `DevGuide.md`, `Ghidra/Extensions/`.
 
-Extensions are the primary way to distribute custom Ghidra functionality. An extension is a zip file containing compiled plugins, scripts, and metadata that Ghidra installs and loads at runtime.
+Extensions are the primary way to distribute custom Ghidra functionality. An extension is a zip file containing compiled
+plugins, scripts, and metadata that Ghidra installs and loads at runtime.
 
 ## Overview
-
-*(To be filled in)*
 
 - `GhidraBuild/Skeleton/` provides a starting template for new extensions
 - Extensions can contribute: plugins, analyzers, loaders, exporters, scripts
@@ -24,8 +23,6 @@ Extensions are the primary way to distribute custom Ghidra functionality. An ext
 - GPL code must live in the `GPL/` top-level directory as a standalone module
 
 ## Extension Types
-
-*(To be filled in)*
 
 - Plugin extensions (Java)
 - Script collections
@@ -41,4 +38,4 @@ Extensions are the primary way to distribute custom Ghidra functionality. An ext
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

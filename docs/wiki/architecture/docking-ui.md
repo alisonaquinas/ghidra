@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary source: `Ghidra/Framework/Docking/`.
 
-The Docking UI framework provides Ghidra's dockable window and tool management system — the infrastructure that allows panels to be dragged, split, tabbed, and saved as tool layouts.
+The Docking UI framework provides Ghidra's dockable window and tool management system — the infrastructure that allows
+panels to be dragged, split, tabbed, and saved as tool layouts.
 
 ## Overview
-
-*(To be filled in)*
 
 - Built on Java Swing
 - `DockingWindowManager` manages the layout of all docked component providers
@@ -24,8 +23,6 @@ The Docking UI framework provides Ghidra's dockable window and tool management s
 - Supports windowed and docked modes, floating windows, and detached panels
 
 ## Key Concepts
-
-*(To be filled in)*
 
 - `ComponentProvider` — a panel that can be docked into a tool
 - `DockingAction` — an action that can appear in menus, toolbars, or context menus
@@ -38,4 +35,4 @@ The Docking UI framework provides Ghidra's dockable window and tool management s
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

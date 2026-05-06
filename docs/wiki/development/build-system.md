@@ -12,19 +12,16 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary sources: `DevGuide.md`, `README.md`, `build.gradle`, `gradle.properties`.
 
-Ghidra uses Gradle as its build system, with a mix of Java, C++, and Python components. The build is orchestrated from the repository root.
+Ghidra uses Gradle as its build system, with a mix of Java, C++, and Python components. The build is orchestrated from
+the repository root.
 
 ## Overview
-
-*(To be filled in)*
 
 - Requires: JDK 21 (64-bit), Gradle 8.5+, Python 3.9–3.14
 - Native components (Decompiler, etc.) require GCC/Clang/MSVC depending on platform
 - Non-Maven-Central dependencies fetched via `gradle -I gradle/support/fetchDependencies.gradle`
 
 ## Key Gradle Tasks
-
-*(To be filled in)*
 
 | Task | Purpose |
 |------|---------|
@@ -37,8 +34,6 @@ Ghidra uses Gradle as its build system, with a mix of Java, C++, and Python comp
 
 ## Platform Notes
 
-*(To be filled in)*
-
 - Windows: requires MSVC (Visual Studio 2017+ or Build Tools), Windows SDK, C++ ATL
 - Linux/macOS: requires GCC or Clang + make
 
@@ -50,4 +45,4 @@ Ghidra uses Gradle as its build system, with a mix of Java, C++, and Python comp
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

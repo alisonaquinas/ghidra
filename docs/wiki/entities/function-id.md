@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary source: `Ghidra/Features/FunctionID/`.
 
-FunctionID identifies known library functions in stripped binaries by matching function hashes against a pre-built database of known functions.
+FunctionID identifies known library functions in stripped binaries by matching function hashes against a pre-built
+database of known functions.
 
 ## Overview
-
-*(To be filled in)*
 
 - Hash-based matching (not behavioral like [[BSim]])
 - Databases shipped with Ghidra cover common C runtime and OS libraries
@@ -31,4 +30,4 @@ FunctionID identifies known library functions in stripped binaries by matching f
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

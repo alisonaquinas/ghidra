@@ -1,0 +1,59 @@
+{
+  // markdownlint-cli2 configuration for Ghidra repository markdown.
+  // Applies to all .md files EXCEPT docs/ (which uses markdownlint-obsidian).
+  //
+  // Rule philosophy: all defaults on; only loosen rules where the existing repo
+  // format makes strict defaults mechanically incompatible — not merely inconvenient.
+  "config": {
+    "default": true,
+
+    // MD013 — line-length: 120 chars; code blocks and tables exempt.
+    // Rationale: technical docs include long URLs and command paths that cannot
+    // be wrapped without losing meaning. 80 would produce massive churn on
+    // GhidraDocs pages. Code blocks and tables are always exempt.
+    "MD013": {
+      "line_length": 120,
+      "heading_line_length": 120,
+      "code_block_line_length": 120,
+      "code_blocks": false,
+      "tables": false
+    },
+
+    // MD004 — ul-style: "consistent" per file.
+    // Rationale: upstream files use both - and * across different files; requiring
+    // one globally would change many files. "consistent" still enforces uniformity
+    // within each individual file.
+    "MD004": { "style": "consistent" },
+
+    // MD026 — no-trailing-punctuation: disabled.
+    // Rationale: Ghidra technical docs use "Section:" heading patterns throughout
+    // (e.g., "##### Install build tools:"). Enforcing this would require renaming
+    // dozens of headings across upstream files.
+    "MD026": false,
+
+    // MD033 — no-inline-html: allow only specific elements present in upstream files.
+    // <img>  — README.md project logo
+    // <br>   — occasional forced line break in docs
+    // <kbd>  — keyboard shortcut notation
+    "MD033": { "allowed_elements": ["img", "br", "kbd"] },
+
+    // MD049 — emphasis-style: "consistent" per file (same rationale as MD004).
+    "MD049": { "style": "consistent" },
+
+    // MD050 — strong-style: "consistent" per file.
+    "MD050": { "style": "consistent" },
+
+    // MD055 — table-pipe-style: "consistent" within each table.
+    "MD055": { "style": "consistent" },
+
+    // MD060 — table-column-style: "consistent" within each table.
+    "MD060": { "style": "consistent" }
+  },
+  // docs/ is linted by markdownlint-obsidian (docs/wiki/.obsidian-linter.jsonc), not this config.
+  "ignores": [
+    "docs/**",
+    "node_modules/**",
+    "build/**",
+    "dependencies/**"
+  ]
+}

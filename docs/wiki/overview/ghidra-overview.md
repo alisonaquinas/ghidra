@@ -12,21 +12,22 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Ingest `README.md` and `GhidraDocs/GettingStarted.md` to fill it in.
 
-Ghidra is an open-source software reverse engineering (SRE) framework created and maintained by the NSA Research Directorate. It provides a suite of tools for analyzing compiled code across a wide variety of platforms, processor architectures, and file formats.
+Ghidra is an open-source software reverse engineering (SRE) framework created and maintained by the NSA Research
+Directorate. It provides a suite of tools for analyzing compiled code across a wide variety of platforms, processor
+architectures, and file formats.
 
 ## Overview
 
 *(To be filled in from `README.md` and `GhidraDocs/GettingStarted.md`)*
 
 Planned content:
+
 - Origin and open-source release history
 - Primary use cases (malware analysis, vulnerability research, binary auditing)
 - Relationship to NSA's cybersecurity mission
 - Comparison to IDA Pro and Binary Ninja at a high level
 
 ## Key Capabilities
-
-*(To be filled in)*
 
 - Disassembly across 35+ processor families
 - C decompilation
@@ -39,16 +40,13 @@ Planned content:
 
 ## High-Level Architecture
 
-*(To be filled in)*
-
 Planned content:
+
 - The three-layer structure: Framework → Features → Extensions
 - How the plugin/tool system ties it together
 - Relationship between GUI mode and headless mode
 
 ## Run Modes
-
-*(To be filled in)*
 
 - GUI mode
 - Headless (batch) mode
@@ -69,7 +67,7 @@ Planned content:
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.
 
 ## Open Questions
 

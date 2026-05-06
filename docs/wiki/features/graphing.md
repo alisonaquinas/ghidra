@@ -12,20 +12,18 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary sources: `Ghidra/Features/FunctionGraph/`, `Ghidra/Features/GraphFunctionCalls/`, `Ghidra/Framework/Graph/`.
 
-Ghidra provides several graph-based views for visualizing code structure, including function call graphs and control flow graphs.
+Ghidra provides several graph-based views for visualizing code structure, including function call graphs and control
+flow graphs.
 
 ## Overview
 
-*(To be filled in)*
-
 Graph types:
+
 - **Function Graph** — control flow graph (CFG) for a single function (blocks and edges)
 - **Function Call Graph** — call relationships between functions in the program
 - **Data Graph** — data reference relationships
 
 ## Graph Framework
-
-*(To be filled in)*
 
 - `Ghidra/Framework/Graph/` provides the underlying graph infrastructure
 - Supports interactive layout, zoom, grouping, and annotation
@@ -39,4 +37,4 @@ Graph types:
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

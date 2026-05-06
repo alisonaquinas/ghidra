@@ -10,7 +10,8 @@ updated: 2026-05-06
 # Other Processors
 
 > [!NOTE]
-> This page is a stub. See [[Processors Overview]] for the full table. This page covers families not yet given their own page.
+> This page is a stub. See [[Processors Overview]] for the full table. This page covers families not yet given their own
+> page.
 
 Placeholder for processor families that appear frequently enough to warrant notes but do not yet have dedicated pages.
 
@@ -49,4 +50,4 @@ Placeholder for processor families that appear frequently enough to warrant note
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

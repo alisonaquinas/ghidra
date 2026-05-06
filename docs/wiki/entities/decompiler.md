@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary sources: `Ghidra/Features/Decompiler/` source tree, `GhidraDocs/GhidraClass/` materials.
 
-The Ghidra decompiler converts [[P-Code]] (Ghidra's IR) into readable C pseudocode. It is implemented as a native C++ process that communicates with the Java GUI over a socket.
+The Ghidra decompiler converts [[P-Code]] (Ghidra's IR) into readable C pseudocode. It is implemented as a native C++
+process that communicates with the Java GUI over a socket.
 
 ## Overview
-
-*(To be filled in)*
 
 - Implemented in `Ghidra/Features/Decompiler/`
 - Native C++ core (`src/decompile/cpp/`)
@@ -25,16 +24,13 @@ The Ghidra decompiler converts [[P-Code]] (Ghidra's IR) into readable C pseudoco
 
 ## Architecture
 
-*(To be filled in)*
-
 Planned content:
+
 - The decompilation pipeline: P-Code → simplified P-Code → high P-Code → C AST → output
 - How the native process is launched and communicated with
 - XML protocol between Java and C++ sides
 
 ## Key Capabilities
-
-*(To be filled in)*
 
 - Type recovery and propagation
 - Variable coalescing and aliasing analysis
@@ -51,7 +47,7 @@ Planned content:
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.
 
 ## Open Questions
 

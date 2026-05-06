@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary sources: `Ghidra/Processors/JVM/`, `Ghidra/Processors/Dalvik/`.
 
-Ghidra supports Java Virtual Machine (JVM) bytecode and Android Dalvik/DEX bytecode as processor targets, enabling analysis of Java class files and Android DEX/ODEX/OAT files.
+Ghidra supports Java Virtual Machine (JVM) bytecode and Android Dalvik/DEX bytecode as processor targets, enabling
+analysis of Java class files and Android DEX/ODEX/OAT files.
 
 ## Overview
-
-*(To be filled in)*
 
 - JVM module handles `.class` files (Java bytecode)
 - Dalvik module handles `.dex` / `.odex` files (Android)
@@ -32,4 +31,4 @@ Ghidra supports Java Virtual Machine (JVM) bytecode and Android Dalvik/DEX bytec
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

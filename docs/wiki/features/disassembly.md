@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary sources: `Ghidra/Features/Base/`, `GhidraDocs/GhidraClass/Beginner/`.
 
-Ghidra's disassembler converts raw binary bytes into instruction mnemonics using [[Sleigh]] processor specifications, producing the Listing view.
+Ghidra's disassembler converts raw binary bytes into instruction mnemonics using [[Sleigh]] processor specifications,
+producing the Listing view.
 
 ## Overview
-
-*(To be filled in)*
 
 - Driven by [[Sleigh]] specs compiled to `.sla` files
 - Produces the Code Listing: instructions, operands, references, data
@@ -24,8 +23,6 @@ Ghidra's disassembler converts raw binary bytes into instruction mnemonics using
 - Supports recursive descent and linear sweep strategies
 
 ## The Listing View
-
-*(To be filled in)*
 
 ## Related Components
 
@@ -36,4 +33,4 @@ Ghidra's disassembler converts raw binary bytes into instruction mnemonics using
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

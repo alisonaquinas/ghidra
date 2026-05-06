@@ -12,7 +12,8 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary source: `Ghidra/Processors/` directory.
 
-Ghidra supports over 35 processor families via [[Sleigh]] specification files. This page catalogs all supported families and links to per-family detail pages.
+Ghidra supports over 35 processor families via [[Sleigh]] specification files. This page catalogs all supported families
+and links to per-family detail pages.
 
 ## Supported Processor Families
 
@@ -57,6 +58,7 @@ Ghidra supports over 35 processor families via [[Sleigh]] specification files. T
 ## Sleigh Spec Structure
 
 Each processor module in `Ghidra/Processors/<family>/data/languages/` contains:
+
 - `*.slaspec` — top-level Sleigh specification
 - `*.sinc` — shared include fragments
 - `*.pspec` — processor metadata (register definitions, calling conventions)
@@ -73,4 +75,4 @@ Each processor module in `Ghidra/Processors/<family>/data/languages/` contains:
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

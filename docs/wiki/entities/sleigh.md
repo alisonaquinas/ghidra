@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary sources: `Ghidra/Processors/` spec files, `GhidraDocs/languages/`, `Ghidra/Framework/SoftwareModeling/`.
 
-Sleigh is Ghidra's domain-specific language for specifying processor instruction set semantics. A Sleigh specification file (`.slaspec` / `.sinc`) describes how to decode binary instructions and lift them to [[P-Code]].
+Sleigh is Ghidra's domain-specific language for specifying processor instruction set semantics. A Sleigh specification
+file (`.slaspec` / `.sinc`) describes how to decode binary instructions and lift them to [[P-Code]].
 
 ## Overview
-
-*(To be filled in)*
 
 - Declarative language: defines tokens, fields, constructors, and semantic actions
 - Used by Ghidra's disassembler and P-Code lifter
@@ -25,9 +24,8 @@ Sleigh is Ghidra's domain-specific language for specifying processor instruction
 
 ## Key Concepts
 
-*(To be filled in)*
-
 Planned content:
+
 - Token and field definitions
 - Constructor tables and pattern matching
 - Semantic actions and P-Code emission
@@ -37,6 +35,7 @@ Planned content:
 ## Sleigh Files Location
 
 Spec files live in `Ghidra/Processors/<family>/data/languages/`. Each processor family has:
+
 - `*.slaspec` — top-level spec (includes `.sinc` fragments)
 - `*.sinc` — shared include fragments
 - `*.pspec` — processor metadata (registers, calling conventions)
@@ -52,7 +51,7 @@ Spec files live in `Ghidra/Processors/<family>/data/languages/`. Each processor 
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.
 
 ## Open Questions
 

@@ -16,8 +16,6 @@ Ghidra's primary IDE is Eclipse. The build system generates nested Eclipse proje
 
 ## Overview
 
-*(To be filled in)*
-
 - Run `gradle cleanEclipse eclipse` to generate `.project` / `.classpath` files
 - Import as "existing projects" from the root
 - The `eclipse/` directory contains Eclipse-specific launcher and formatter configs
@@ -31,4 +29,4 @@ Ghidra's primary IDE is Eclipse. The build system generates nested Eclipse proje
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

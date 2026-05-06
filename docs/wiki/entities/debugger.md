@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary sources: `Ghidra/Debug/` source tree, `GhidraDocs/GhidraClass/Debugger/`.
 
-The Ghidra Debugger is the dynamic analysis subsystem introduced in Ghidra 10.x. It integrates live debugging sessions with Ghidra's static analysis, enabling trace recording, memory inspection, and emulation.
+The Ghidra Debugger is the dynamic analysis subsystem introduced in Ghidra 10.x. It integrates live debugging sessions
+with Ghidra's static analysis, enabling trace recording, memory inspection, and emulation.
 
 ## Overview
-
-*(To be filled in)*
 
 - Located in `Ghidra/Debug/`
 - Connects to external debuggers via agent plugins
@@ -25,9 +24,8 @@ The Ghidra Debugger is the dynamic analysis subsystem introduced in Ghidra 10.x.
 
 ## Debugger Architecture
 
-*(To be filled in)*
-
 Planned content:
+
 - The TraceModeling framework (`Ghidra/Debug/Framework-TraceModeling/`)
 - The RMI trace protocol (`Ghidra/Debug/Debugger-rmi-trace/`)
 - How agents connect to the debugger backend
@@ -53,7 +51,7 @@ Planned content:
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.
 
 ## Open Questions
 

@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary sources: `Ghidra/Features/Base/` analyzer sources, `GhidraDocs/GhidraClass/` materials.
 
-The Ghidra analysis pipeline is the automated sequence of analyzers that run when a binary is imported or when the user triggers "Auto Analyze." Each analyzer examines specific aspects of the program and annotates the [[Program Model]].
+The Ghidra analysis pipeline is the automated sequence of analyzers that run when a binary is imported or when the user
+triggers "Auto Analyze." Each analyzer examines specific aspects of the program and annotates the [[Program Model]].
 
 ## Overview
-
-*(To be filled in)*
 
 - Analyzers are ordered by priority and run sequentially or in dependency order
 - Each analyzer can be enabled/disabled in the Analysis Options dialog
@@ -25,9 +24,8 @@ The Ghidra analysis pipeline is the automated sequence of analyzers that run whe
 
 ## Key Analyzers
 
-*(To be filled in)*
-
 Planned content:
+
 - Disassembler (entry point discovery, recursive descent)
 - Function analyzer
 - Data type propagation
@@ -48,4 +46,4 @@ Planned content:
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

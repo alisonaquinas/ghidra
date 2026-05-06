@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary sources: `Ghidra/Features/PyGhidra/`, `Ghidra/Features/Base/` scripting sources.
 
-PyGhidra is Ghidra's Python 3 integration layer, implemented via JPype. It allows analysts to script Ghidra using Python 3, including interactive use and headless automation.
+PyGhidra is Ghidra's Python 3 integration layer, implemented via JPype. It allows analysts to script Ghidra using Python
+3, including interactive use and headless automation.
 
 ## Overview
-
-*(To be filled in)*
 
 - Replaces the older Jython 2.7 scripting (which used `Ghidra/Extensions/Jython/`)
 - Uses JPype to bridge CPython and the JVM
@@ -24,8 +23,6 @@ PyGhidra is Ghidra's Python 3 integration layer, implemented via JPype. It allow
 - Supports both interactive (GUI) and headless scripting modes
 
 ## Key Differences from Jython
-
-*(To be filled in)*
 
 - CPython 3.x vs. Jython 2.7
 - Full access to Python 3 ecosystem (pip packages)
@@ -40,7 +37,7 @@ PyGhidra is Ghidra's Python 3 integration layer, implemented via JPype. It allow
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.
 
 ## Open Questions
 

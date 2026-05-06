@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary sources: `Ghidra/Framework/Project/`, `Ghidra/Framework/Docking/`, `DevGuide.md`.
 
-Ghidra's plugin system is the primary extension mechanism. Plugins register services, provide actions, and contribute UI components to tools (workspaces of docked windows).
+Ghidra's plugin system is the primary extension mechanism. Plugins register services, provide actions, and contribute UI
+components to tools (workspaces of docked windows).
 
 ## Overview
-
-*(To be filled in)*
 
 - A **Tool** is a named workspace: a collection of plugins + their UI layout
 - A **Plugin** contributes: services, actions (menu items/toolbar), component providers (docked panels)
@@ -25,8 +24,6 @@ Ghidra's plugin system is the primary extension mechanism. Plugins register serv
 
 ## Key Concepts
 
-*(To be filled in)*
-
 - `PluginTool` — the runtime container for a set of plugins
 - `Plugin` — the base class for all plugins
 - `ServiceProvider` / `ServiceRegistry` — service discovery
@@ -34,8 +31,6 @@ Ghidra's plugin system is the primary extension mechanism. Plugins register serv
 - `DockingAction` — a menu item or toolbar button
 
 ## Extension Points
-
-*(To be filled in)*
 
 - Analyzers (extension of [[Analysis Pipeline]])
 - Loaders (extension of [[File Format Support]])
@@ -50,4 +45,4 @@ Ghidra's plugin system is the primary extension mechanism. Plugins register serv
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

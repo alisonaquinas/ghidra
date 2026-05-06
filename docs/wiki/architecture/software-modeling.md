@@ -12,13 +12,13 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary source: `Ghidra/Framework/SoftwareModeling/`.
 
-The SoftwareModeling framework is the largest and most foundational Framework module. It contains the Program model, the data type system, the [[Sleigh]] compiler, and the [[P-Code]] infrastructure.
+The SoftwareModeling framework is the largest and most foundational Framework module. It contains the Program model, the
+data type system, the [[Sleigh]] compiler, and the [[P-Code]] infrastructure.
 
 ## Overview
 
-*(To be filled in)*
-
 Key responsibilities:
+
 - Defines the `Program` interface and its full implementation
 - Hosts the data type system (C-like types: structs, unions, enums, pointers, arrays, typedefs)
 - Contains the Sleigh compiler (`ghidra.pcodeCPort.*`) that translates `.slaspec` → `.sla`
@@ -35,4 +35,4 @@ Key responsibilities:
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.

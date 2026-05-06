@@ -12,11 +12,10 @@ updated: 2026-05-06
 > [!NOTE]
 > This page is a stub. Primary source: `Ghidra/Processors/x86/`.
 
-Ghidra's x86 processor module supports the Intel/AMD x86 family across 16-bit, 32-bit (IA-32), and 64-bit (x86-64/AMD64) modes.
+Ghidra's x86 processor module supports the Intel/AMD x86 family across 16-bit, 32-bit (IA-32), and 64-bit (x86-64/AMD64)
+modes.
 
 ## Overview
-
-*(To be filled in)*
 
 - The most heavily used and tested processor module in Ghidra
 - Supports real mode (16-bit), protected mode (32-bit), and long mode (64-bit)
@@ -25,16 +24,13 @@ Ghidra's x86 processor module supports the Intel/AMD x86 family across 16-bit, 3
 
 ## Sleigh Files
 
-*(To be filled in)*
-
 Located in `Ghidra/Processors/x86/data/languages/`:
+
 - `x86.slaspec` — 32-bit mode
 - `x86-64.slaspec` — 64-bit mode
 - Shared `.sinc` files for instruction groups
 
 ## Known Issues / Quirks
-
-*(To be filled in)*
 
 ## Related Components
 
@@ -45,4 +41,4 @@ Located in `Ghidra/Processors/x86/data/languages/`:
 
 ## Sources
 
-*(None ingested yet)*
+None ingested yet.
