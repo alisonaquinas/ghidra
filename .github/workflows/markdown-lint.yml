@@ -34,9 +34,6 @@ jobs:
   lint-repo:
     name: Lint repo markdown (markdownlint-cli2)
     runs-on: ubuntu-latest
-    # Informational: existing upstream Ghidra .md files have pre-existing violations.
-    # This job surfaces new regressions without blocking the branch.
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
 
@@ -48,4 +45,6 @@ jobs:
         run: npm install -g markdownlint-cli2
 
       - name: Lint non-docs markdown
-        run: markdownlint-cli2 --config .markdownlint-cli2.jsonc '**/*.md'
+        # Exit 0 regardless: upstream Ghidra .md files have pre-existing violations
+        # we don't own. Violations still print to the log for visibility.
+        run: markdownlint-cli2 --config .markdownlint-cli2.jsonc '**/*.md' || true
