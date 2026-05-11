@@ -19,6 +19,15 @@ import ghidra.program.model.address.Address;
 import ghidra.program.model.lang.Register;
 import ghidra.program.model.lang.RegisterValue;
 
+/**
+ * Manages default register values for a program.
+ * <p>
+ * Default values are used as fallback context when no explicit register value has been set at a
+ * given address. They allow processor context registers (e.g., TMode for ARM Thumb mode) to be
+ * pre-seeded over address ranges so that disassembly starts with correct assumptions.
+ *
+ * @see ProgramContext
+ */
 public interface DefaultProgramContext {
 
 	/**

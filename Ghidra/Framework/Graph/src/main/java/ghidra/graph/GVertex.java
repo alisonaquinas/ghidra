@@ -15,6 +15,16 @@
  */
 package ghidra.graph;
 
+/**
+ * Marker interface for vertices in a Ghidra directed graph.
+ * <p>
+ * All vertex types used with {@link GDirectedGraph} and related graph structures must implement
+ * this interface. It currently carries no required methods; it exists for type safety and
+ * symmetry with {@link GEdge}.
+ *
+ * @see GEdge
+ * @see GDirectedGraph
+ */
 public interface GVertex {
 
 	// TODO this is currently here only to be symmetrical with GEdge...maybe methods will

@@ -21,6 +21,16 @@ import java.util.NoSuchElementException;
 import ghidra.docking.settings.Settings;
 import ghidra.program.database.data.EnumSignedState;
 
+/**
+ * A data type representing an enumeration: a set of named integer constants.
+ * <p>
+ * Each entry maps a name to a {@code long} value and an optional comment. Multiple names may
+ * share the same value. The size of the enum in bytes determines the range of representable
+ * values.
+ * <p>
+ * Enums are used to annotate program data representing one of a finite set of coded values
+ * (e.g., error codes, status flags, protocol constants).
+ */
 public interface Enum extends DataType {
 
 	/**

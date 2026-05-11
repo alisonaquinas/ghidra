@@ -20,6 +20,13 @@ import ghidra.util.InvalidNameException;
 import ghidra.util.exception.DuplicateNameException;
 import ghidra.util.task.TaskMonitor;
 
+/**
+ * A named category (folder) within a {@code DataTypeManager}'s data type hierarchy.
+ * <p>
+ * Categories are identified by a slash-delimited path (e.g., {@code "/stddef.h"} or
+ * {@code "/Windows Types/HANDLE"}). They can contain child data types and subcategories.
+ * The root category has an empty name and the path {@code "/"}.
+ */
 public interface ICategory {
 	public static final char DELIMITER_CHAR = '/';
 

@@ -16,6 +16,16 @@
  */
 package ghidra.program.model.listing;
 
+/**
+ * Represents a local (non-parameter) variable within a function body.
+ * <p>
+ * Local variables are scoped to a function and are associated with a first-use offset — the
+ * instruction offset within the function at which the variable first comes into scope.
+ * Unlike parameters, local variables do not occupy a position in the function signature.
+ *
+ * @see Variable
+ * @see Parameter
+ */
 public interface LocalVariable extends Variable {
     /**
      * Set the first use offset.

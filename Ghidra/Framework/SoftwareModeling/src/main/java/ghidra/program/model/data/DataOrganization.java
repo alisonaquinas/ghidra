@@ -17,6 +17,18 @@ package ghidra.program.model.data;
 
 import java.util.Arrays;
 
+/**
+ * Describes the data organization (alignment, sizing, and layout rules) for a target platform
+ * as defined by its compiler specification ({@code .cspec}).
+ * <p>
+ * Provides access to platform-specific integer widths, pointer sizes, floating-point sizes,
+ * bitfield packing conventions, and aggregate alignment rules. These values are used by Ghidra's
+ * data type system when computing the sizes and offsets of composite types (structures and unions).
+ * <p>
+ * Obtain an instance via {@code DataTypeManager.getDataOrganization()}.
+ *
+ * @see BitFieldPacking
+ */
 public interface DataOrganization {
 
 	int NO_MAXIMUM_ALIGNMENT = 0;

@@ -16,6 +16,13 @@
  */
 package ghidra.program.model.data;
 
+/**
+ * Controls how a data type renders its string representation in the Ghidra listing display.
+ * <p>
+ * Implementors control the maximum label string length and whether the abbreviated form of the
+ * type name should be used. {@link #DEFAULT} provides standard rendering with no abbreviation
+ * and a {@value #MAX_LABEL_STRING_LENGTH}-character label limit.
+ */
 public interface DataTypeDisplayOptions {
 	public static int MAX_LABEL_STRING_LENGTH = 32;
 	public static DataTypeDisplayOptions DEFAULT = new DataTypeDisplayOptions() {

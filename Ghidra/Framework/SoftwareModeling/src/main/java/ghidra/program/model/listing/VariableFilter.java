@@ -16,6 +16,17 @@
  */
 package ghidra.program.model.listing;
 
+/**
+ * Predicate interface for testing whether a {@link Variable} satisfies a particular storage or
+ * role criterion.
+ * <p>
+ * Standard implementations are available as constants on this interface:
+ * {@link #PARAMETER_FILTER}, {@link #LOCAL_VARIABLE_FILTER}, {@link #STACK_VARIABLE_FILTER},
+ * {@link #REGISTER_VARIABLE_FILTER}, {@link #MEMORY_VARIABLE_FILTER}, and others.
+ *
+ * @see Variable
+ * @see Function
+ */
 public interface VariableFilter {
 
 	/**

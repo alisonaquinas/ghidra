@@ -18,6 +18,14 @@ package ghidra.program.model.data;
 import ghidra.docking.settings.Settings;
 import ghidra.program.model.mem.MemBuffer;
 
+/**
+ * Implemented by character and string data types that have an associated character set (charset).
+ * <p>
+ * Provides default helper methods for encoding a character value or its string representation
+ * to bytes, delegating to {@link StringDataInstance}. Implementors may override
+ * {@link #getCharsetName(Settings)} to return a charset specific to the concrete type
+ * (e.g., {@code "US-ASCII"}, {@code "UTF-16BE"}).
+ */
 public interface DataTypeWithCharset extends DataType {
 
 	/**

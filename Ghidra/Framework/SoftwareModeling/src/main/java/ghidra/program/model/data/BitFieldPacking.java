@@ -15,6 +15,16 @@
  */
 package ghidra.program.model.data;
 
+/**
+ * Defines the bit-field packing and alignment conventions used by a target compiler.
+ * <p>
+ * Controls whether MSVC or GCC/clang semantics apply, whether the declared type of a bit-field
+ * affects the enclosing structure's alignment, and the behavior of zero-length unnamed
+ * bit-fields. These settings are read from the compiler specification ({@code .cspec}) and
+ * applied when Ghidra lays out structure and union types containing bit-fields.
+ *
+ * @see DataOrganization
+ */
 public interface BitFieldPacking {
 
 	/**

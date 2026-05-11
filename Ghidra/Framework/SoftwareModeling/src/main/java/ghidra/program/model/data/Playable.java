@@ -19,6 +19,13 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.Icon;
 
+/**
+ * Implemented by data types that can render and activate associated media content (e.g., audio)
+ * when interacted with in the listing.
+ * <p>
+ * {@link #getImageIcon()} provides the icon displayed alongside the data item, and
+ * {@link #clicked(MouseEvent)} is invoked when the user activates it.
+ */
 public interface Playable {
 
 	public Icon getImageIcon();
